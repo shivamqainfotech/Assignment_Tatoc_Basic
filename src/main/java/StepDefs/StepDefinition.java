@@ -37,37 +37,44 @@ public class StepDefinition {
 	@When("^I Clicks on Repaint link untill color of second box becomes same then click proceed$")
 	public void i_Clicks_on_Repaint_link_untill_color_of_second_box_becomes_same_then_click_proceed() throws Throwable {
 	    action.multiple_clicks_on_repaint_box();
+	    logger.info("I Clicks on Repaint link untill color of second box becomes same then click proceed.");
 	}
 
 	@When("^DRAG ME box is dragged to the cell labeled DROPBOX then click on Proceed link$")
 	public void drag_ME_box_is_dragged_to_the_cell_labeled_DROPBOX_then_click_on_Proceed_link() throws Throwable {
 	    action.perform_drag_n_drop();
-	    
+	    logger.info("DRAG ME box is dragged to the cell labeled DROPBOX then click on Proceed link.");
 	}
 
 	@When("^Clicking on launch window link will launch a popup window with a form$")
 	public void clicking_on_launch_window_link_will_launch_a_popup_window_with_a_form() throws Throwable {
-		action.launch_popUp_window("Shivam");
+		String name="Shivam";
+		action.launch_popUp_window(name);
+		logger.info("Clicking on launch window link is launching a new tab with a form where i have given text ="+name);
 	}
 
 	@Then("^Submit the form with your name to close it and click proceed$")
 	public void submit_the_form_with_your_name_to_close_it_and_click_proceed() throws Throwable {
-	    
+	    action.perform_click_on_proceed();
+	    logger.info("Submited the form with name and proceed.");
 	}
 
 	@Then("^Clicking on Generate Token will print token in Token box$")
 	public void clicking_on_Generate_Token_will_print_token_in_Token_box() throws Throwable {
-	    
+	    action.click_generate_token();
+	    logger.info("Clicking on Generate Token has printed a token in Token box.");
 	}
 
 	@Then("^Copy token value and create a Cookie on this page$")
 	public void copy_token_value_and_create_a_Cookie_on_this_page() throws Throwable {
-	    
+	    action.copy_token();
+	    logger.info("Copy token value and create a Cookie on this page and get the substring of it.");
 	}
 
 	@Then("^Clicking on Proceed link when Token cookie is set properly and Token is valid will take you to next page$")
 	public void clicking_on_Proceed_link_when_Token_cookie_is_set_properly_and_Token_is_valid_will_take_you_to_next_page() throws Throwable {
-	    
+	    action.click_proceed_cookie();
+	    logger.info("Since my cookie is valid , Clicking on Proceed link when Token cookie is set properly has taken me to next page.");
 	}
 
 

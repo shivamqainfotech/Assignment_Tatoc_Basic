@@ -1,3 +1,10 @@
-
-2017-07-25 18:49:46 INFO  StepDefinition:28 - I am on tatoc page and clicked on basic course then a new window appears.
-2017-07-25 18:49:46 INFO  StepDefinition:34 - I clicked on green box and next window will apppear.
+2017-07-26 10:40:56 INFO  StepDefinition:28 - I am on tatoc page and clicked on basic course then a new window appears.
+2017-07-26 10:40:56 INFO  StepDefinition:34 - I clicked on green box and next window will apppear.
+2017-07-26 10:41:57 INFO  StepDefinition:40 - I Clicks on Repaint link untill color of second box becomes same then click proceed.
+2017-07-26 10:41:57 INFO  StepDefinition:46 - DRAG ME box is dragged to the cell labeled DROPBOX then click on Proceed link.
+2017-07-26 10:41:57 INFO  StepDefinition:53 - Clicking on launch window link is launching a new tab with a form where i have given text =Shivam
+2017-07-26 10:41:57 INFO  StepDefinition:59 - Submited the form with name and proceed.
+2017-07-26 10:41:57 INFO  StepDefinition:65 - Clicking on Generate Token has printed a token in Token box.
+2017-07-26 10:41:58 INFO  StepDefinition:71 - Copy token value and create a Cookie on this page and get the substring of it.
+2017-07-26 10:41:58 INFO  StepDefinition:77 - Since my cookie is valid , Clicking on Proceed link when Token cookie is set properly has taken me to next page.
+2017-07-26 10:44:56 INFO  StepDefinition:28 - I am on tatoc page and clicked on basic course then a new window appears.

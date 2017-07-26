@@ -1,7 +1,9 @@
 package com.qait.tatoc.action;
 
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -60,11 +62,33 @@ public class Action {
 	}
 
 	public void launch_popUp_window(String name) {
+		String oldTab=driver.getWindowHandle();
 		driver.findElement(pageObj.getL_Popup_Window()).click();
+		 ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
+		    newTab.remove(oldTab);
+		    driver.switchTo().window(newTab.get(0));
 		WebElement ele = driver.findElement(pageObj.getI_input_name());
 		ele.click();
 		ele.sendKeys(name);
-		ele.submit();
+		driver.findElement(pageObj.getI_submit()).click();
+		driver.switchTo().window(oldTab);
+	}
+	
+	public void perform_click_on_proceed() {
+		driver.findElement(pageObj.getL_submit_name_proceed()).click();
+	}
+	public void click_generate_token() {
+		driver.findElement(pageObj.getL_Generate_Token()).click();
+	}
+	public void copy_token() {
+		String tokenValue=driver.findElement(pageObj.getI_token()).getText();
+		String token = tokenValue.substring(7);
+		Cookie name = new Cookie("Token", token);
+		driver.manage().addCookie(name);
+		
+	}
+	public void click_proceed_cookie() {
+		driver.findElement(pageObj.getL_dragNdrop_proceed()).click();
 	}
 
 }
